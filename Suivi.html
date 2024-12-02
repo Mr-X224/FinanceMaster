@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi des Dépenses</title>
+    <link rel="stylesheet" href="suivistyles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Suivi des Dépenses</h1>
+        <p>Enregistrez vos dépenses quotidiennes, visualisez vos dépenses totales, et exportez-les en PDF.</p>
+
+        <form id="expense-form">
+            <div class="input-group">
+                <label for="expense-name">Nom de la dépense</label>
+                <input type="text" id="expense-name" placeholder="Ex: Courses, Transport" required>
+            </div>
+
+            <div class="input-group">
+                <label for="expense-amount">Montant (MAD)</label>
+                <input type="number" id="expense-amount" placeholder="Saisissez le montant" required>
+            </div>
+
+            <button type="button" id="add-expense-button">Ajouter</button>
+        </form>
+
+        <div class="expense-list">
+            <h2>Liste des Dépenses</h2>
+            <ul id="expenses">
+                <!-- Les dépenses seront ajoutées ici dynamiquement -->
+            </ul>
+        </div>
+
+        <div class="total-expenses">
+            <h2>Total des Dépenses</h2>
+            <p><strong>Total :</strong> <span id="total-amount">0</span> MAD</p>
+        </div>
+
+        <div class="buttons">
+            <button id="export-pdf">Exporter en PDF</button>
+            <button onclick="window.location.href='index.html';">Site Principal</button>
+        </div>
+    </div>
+
+    <script src="suiviscript.js"></script>
+</body>
+</html>

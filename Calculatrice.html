@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice de Budget</title>
+    <link rel="stylesheet" href="clactyles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculatrice de Budget</h1>
+        <p>Organisez vos revenus et vos dépenses pour une vue claire de vos finances.</p>
+
+        <form id="budget-form">
+            <div class="input-group">
+                <label for="income">Revenus (MAD)</label>
+                <input type="number" id="income" placeholder="Saisissez vos revenus" required>
+            </div>
+
+            <div class="input-group">
+                <label for="expenses">Dépenses (MAD)</label>
+                <input type="number" id="expenses" placeholder="Saisissez vos dépenses" required>
+            </div>
+
+            <button type="button" id="calculate-button">Calculer</button>
+        </form>
+
+        <div class="results">
+            <h2>Résultats</h2>
+            <p><strong>Revenus :</strong> <span id="result-income">0</span>MAD</p>
+            <p><strong>Dépenses :</strong> <span id="result-expenses">0</span>MAD</p>
+            <p><strong>Solde Restant :</strong> <span id="result-balance" class="positive">0</span>MAD</p>
+        </div>
+
+        <!-- Bouton pour revenir au site principal -->
+        <button id="return-button"><a href="index.html">Site Principal</a></button>
+    </div>
+
+    <script src="clacscript.js"></script>
+</body>
+</html>

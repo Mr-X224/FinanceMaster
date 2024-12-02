@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar"></nav> 
+            <p class="navbar-logo">FinanceMaster</p>
+            <nav>
+                <ul class="navbar-menu">
+                    <li class="li"><a class="a" href="index.html">Accueil</a></li>
+                    <li class="li"><a class="a" href="contact.html">Contact</a></li>
+                    <li class="li"><a class="a" href="index.html#boox">Outils Financiers</a></li>
+                </ul>
+            </nav>
+            <button  id="login-button" class="btn"><a href="login.html" class="navbar-cta">S'inscrire</a></button>
+            </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <div class="avatar"></div>
+            <form>
+                <label>nom d'utilisateur</label><br>
+                <input type="text" placeholder="Anas18" id="utilisateur"><br>
+                <label>Mot de passe</label><br>
+                <input type="password" id="password"><br>
+                <button class="moo" type="button">Se connecter</button><br>
+                <button class="mo" type="button">
+                    <a href="login.html" class="navbar-cta">S'inscrire</a>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1 id="h1">FinanceMaster</h1>
+                <p id="p">Restez informé des dernières nouveautés et mises à jour sur nos fonctionnalités.</p>
+                <p class="privacy-text">En vous abonnant, vous acceptez notre Politique de Confidentialité et recevrez des mises à jour.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Page d'Accueil</a></li>
+                        <li><a href="index.html#boox">Outils Financiers</a></li>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Centre d'Aide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Connectez-vous avec nous</h3>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Relume. Tous droits réservés.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Politique de Confidentialité</a>
+                <a href="#">Conditions d'Utilisation</a>
+                <a href="cookies.html" id="cookie-info-link">Paramètres des Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = `${name}=${encodeURIComponent(value)}; expires=${date.toUTCString()}; path=/`;
+        }
+    
+        document.querySelector(".moo").onclick = function () {
+            const utilisateur = document.getElementById("utilisateur").value;
+            const password = document.getElementById("password").value;
+    
+            if (utilisateur && password) {
+                // Enregistrer les informations dans les cookies
+                setCookie("utilisateur", utilisateur, 100);
+                setCookie("isLoggedIn", "true", 100);
+    
+                alert("Les cookies ont été récupérés !");
+                window.location.href = "index.html";
+            } else {
+                alert("Veuillez remplir tous les champs.");
+            }
+        };
+    </script>
+    
+</body>
+</html>
