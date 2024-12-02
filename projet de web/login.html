@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar"></nav> 
+            <p class="navbar-logo">FinanceMaster</p>
+            <nav>
+                <ul class="navbar-menu">
+                    <li class="li"><a class="a" href="index.html">Accueil</a></li>
+                    <li class="li"><a class="a" href="contact.html">Contact</a></li>
+                    <li class="li"><a class="a" href="index.html#boox">Outils Financiers</a></li>
+                </ul>
+            </nav>
+            <button  id="login-button" class="btn"><a href="loginn.html" class="navbar-cta">Se connecter</a></button>
+            </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <div class="avatar"></div>
+            <h2>CRÉER UN COMPTE</h2>
+            <form id="signup-form">
+                <label>Nom complet</label><br>
+                <input type="text" id="full-name" placeholder="Anas" required><br>
+
+                <label>nom d'utilisateur</label><br>
+                <input type="text" id="utilisateur"  placeholder="Anas18"><br>
+
+                <label>Email</label><br>
+                <input type="email" id="email" placeholder="anas@gmail.com" required><br>
+
+                <label>Numéro de téléphone</label><br>
+                <input type="tel" id="phone" placeholder="0600000000" required><br>
+
+                <label>Date de naissance</label><br>
+                <input type="date" id="birthdate" required><br>
+
+                <label>Genre</label><br>
+                <label>
+                    <input type="radio" name="gender" value="Homme" required> Homme
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="Femme"> Femme
+                </label><br>
+
+                <label>Pays</label><br>
+                <select id="country" required>
+                    <option value="maroc">Maroc</option>
+                    <option value="france">France</option>
+                    <option value="espagne">Espagne</option>
+                    <option value="algérie">Algérie</option>
+                    <option value="tunisie">Tunisie</option>
+                    <option value="italie">Italie</option>
+                    <option value="allemagne">Allemagne</option>
+                    <option value="canada">Canada</option>
+                    <option value="états-unis">États-Unis</option>
+                    <option value="royaume-uni">Royaume-Uni</option>
+                    <option value="brésil">Brésil</option>
+                    <option value="japon">Japon</option>
+                    <option value="chine">Chine</option>
+                    <option value="inde">Inde</option>
+                    <option value="australie">Australie</option>
+                </select><br>
+
+                <label>Mot de passe</label><br>
+                <input type="password" id="password" required><br>
+
+                <button type="button" id="signup-button">S'inscrire</button><br>
+                <button class="mo" type="button"><a href="login.html" class="navbar-cta">Se connecter</a></button>
+                
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h1 id="h1">FinanceMaster</h1>
+                <p id="p">Restez informé des dernières nouveautés et mises à jour sur nos fonctionnalités.</p>
+                <p class="privacy-text">En vous abonnant, vous acceptez notre Politique de Confidentialité et recevrez des mises à jour.</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="#">Page d'Accueil</a></li>
+                        <li><a href="#boox">Outils Financiers</a></li>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Centre d'Aide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Connectez-vous avec nous</h3>
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Relume. Tous droits réservés.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Politique de Confidentialité</a>
+                <a href="#">Conditions d'Utilisation</a>
+                <a href="cookies.html" id="cookie-info-link">Paramètres des Cookies</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Fonction pour définir un cookie avec une durée de vie spécifiée
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            const expires = "; expires=" + date.toUTCString();
+            document.cookie = name + "=" + encodeURIComponent(value) + expires + "; path=/";
+        }
+
+        // Fonction pour gérer la soumission du formulaire d'inscription
+        document.getElementById('signup-button').onclick = function () {
+            const fullName = document.getElementById('full-name').value;
+            const utilisateur = document.getElementById('utilisateur').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const birthdate = document.getElementById('birthdate').value;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value;
+            const country = document.getElementById('country').value;
+            const password = document.getElementById('password').value;
+
+            if (!fullName || !utilisateur || !email || !phone || !birthdate || !gender || !country || !password) {
+                alert("Veuillez remplir tous les champs.");
+                return;
+            }
+
+            // Enregistrer les données dans les cookies
+            setCookie("fullName", fullName, 7);
+            setCookie("utilisateur", utilisateur, 7);
+            setCookie("email", email, 7);
+            setCookie("phone", phone, 7);
+            setCookie("birthdate", birthdate, 7);
+            setCookie("gender", gender, 7);
+            setCookie("country", country, 7);
+
+            alert("Inscription réussie ! Vous allez être redirigé vers la page pour Se connecter et Les cookies ont été récupérés !.");
+
+            // Rediriger vers la page d'accueil après l'inscription
+            window.location.href = "loginn.html";
+        };
+    </script>
+  
+</body>
+</html>

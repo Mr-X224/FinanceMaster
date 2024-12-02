@@ -1,0 +1,432 @@
+/* Importation de la police */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Style global */
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    background-image: url('Background\ \(7\).svg');
+}
+
+/* Navbar */
+.li,.a{
+    font-weight: 500;
+    font-family: "Montserrat",sans-serif;
+    font-size: 16;
+    text-decoration: none;
+    color: #000000;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+.navbar-logo{
+    cursor: pointer;
+    font-weight: 600;
+    font-family: "Montserrat",sans-serif;
+    font-size: 16;
+}
+.navbar-menu{
+    list-style: none;
+}
+.navbar-menu .li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+.navbar-menu .li .a {
+    transition: all 0.3s ease 0s;
+}
+.navbar-menu .li .a:hover {
+    color: #6A4CB3;
+}
+.navbar-cta{
+    text-decoration: none;
+    color: #fff;
+   
+}
+.btn{
+    transition: all 0.3s ease 0s;
+    width: 150px;
+    height: 40px;
+    background: #4A378E;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+ 
+}
+.btn:hover .navbar-cta {
+    color: #4A378E; /* Change la couleur du texte de <a> au survol */
+}
+.btn:hover{
+    background: #fff;
+    color: #4A378E;
+    border: 1px solid #4A378E ;
+    
+}
+/* Formulaire de contact */
+/* Style global */
+
+
+/* Entête */
+
+
+/* Formulaire de contact */
+/* Style global */
+
+
+/* Entête */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4A378E;
+    margin: 40px 0;
+}
+
+/* Formulaire de contact */
+main {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #4A378E;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.laabel {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.iinput, .textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.iinput:focus, .textarea:focus {
+    border-color: #4A378E;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 55, 142, 0.2);
+}
+
+.textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.buutton {
+    width: 100%;
+    padding: 15px;
+    background-color: #4A378E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buutton:hover {
+    background-color: #6A4CB3;
+}
+
+/* Informations de contact */
+#contact-info {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-info #pp {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #555;
+}
+
+#contact-info a {
+    color: #4A378E;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Styles responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .iinput, .textarea, .buutton {
+        font-size: 1rem;
+    }
+
+    #contact-form, #contact-info {
+        padding: 20px;
+    }
+}
+
+
+/* Cookie Banner */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4A378E;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+.cookie-banner button {
+    margin-left: 20px;
+    padding: 8px 16px;
+    background-color: #6A4CB3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cookie-banner button:hover {
+    background-color: #4A378E;
+}
+
+/* Footer principal */
+footer {
+    background-color: #6A4CB3; /* Couleur pourpre élégante avec une teinte plus professionnelle */
+    padding: 40px 5%;
+    color: #ffffff;
+    
+}
+
+/* Conteneur principal du footer */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Section logo du footer */
+.footer-logo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo #h1 {
+    font-size: 26px;
+    margin-top: 10px;
+    color: #ffffff;
+    text-transform: uppercase; /* Majuscules pour le titre */
+    letter-spacing: 1px; 
+    margin-right: 40%;/* Espacement pour une meilleure lisibilité */
+}
+
+.footer-logo #p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 10px 0;
+    color: #d4d4d4; /* Texte avec une légère teinte grise */
+}
+
+/* Formulaire d'inscription à la newsletter */
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.newsletter-form button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #4A378E; /* Teinte plus foncée pour le bouton */
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+   
+    background: #fff;
+    color: #341F6C;
+    border: 1px solid #341F6C ; /* Changement de couleur au survol */
+}
+
+.privacy-text {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #bfbfbf;
+    text-align: left;
+}
+
+/* Liens du footer */
+.footer-links {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #d4d4d4;
+    font-size: 14px;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Liens sociaux */
+/* Style des icônes sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.social-links li {
+    list-style: none;
+}
+
+.social-links li a {
+    display: inline-block;
+    width: 40px;
+    text-decoration: none;
+    height: 40px;
+    background-color: #4A378E; /* Couleur d'arrière-plan pour l'icône */
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links li a:hover {
+    background-color: #341F6C; /* Changement de couleur au survol */
+    transform: scale(1.1); /* Zoom léger au survol */
+}
+
+
+/* Bas de page (footer-bottom) */
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #d4d4d4;
+    font-size: 14px;
+    color: #bfbfbf;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+    color: #bfbfbf;
+    transition: color 0.3s ease;
+    margin-right: 15px;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Adaptabilité pour les écrans plus petits */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-logo,
+    .footer-links {
+        flex: unset;
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

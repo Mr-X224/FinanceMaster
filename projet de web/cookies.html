@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Stockés</title>
+</head>
+<body>
+    <header>
+        <h1>Liste des Cookies Stockés</h1>
+    </header>
+    
+    <main>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nom du cookie</th>
+                    <th>Valeur du cookie</th>
+                </tr>
+            </thead>
+            <tbody id="cookies-table-body">
+                <!-- Les cookies seront affichés ici -->
+            </tbody>
+        </table>
+    </main>
+
+    <script>
+        // Fonction pour obtenir tous les cookies
+        function getAllCookies() {
+            const cookies = document.cookie.split(";").map(cookie => cookie.trim());
+            return cookies;
+        }
+
+        // Fonction pour afficher tous les cookies dans un tableau
+        function displayCookies() {
+            const cookiesArray = getAllCookies();
+            const tableBody = document.getElementById("cookies-table-body");
+
+            if (cookiesArray.length === 0) {
+                const row = tableBody.insertRow();
+                const cell = row.insertCell();
+                cell.colSpan = 2;
+                cell.textContent = "Aucun cookie trouvé.";
+            } else {
+                cookiesArray.forEach(cookie => {
+                    const [name, value] = cookie.split("=");
+                    const row = tableBody.insertRow();
+                    const cell1 = row.insertCell();
+                    const cell2 = row.insertCell();
+
+                    cell1.textContent = decodeURIComponent(name.trim());
+                    cell2.textContent = decodeURIComponent(value.trim());
+                });
+            }
+        }
+
+        // Afficher les cookies au chargement de la page
+        window.onload = displayCookies;
+    </script>
+</body>
+</html>
